@@ -24,6 +24,15 @@ nav{margin-left:auto}
 .nav-list{display:flex; gap:14px; list-style:none; padding:0; margin:0}
 .nav-list a{color:var(--muted); text-decoration:none; font-weight:600; padding:8px 12px; border-radius:10px}
 .nav-list a:hover{color:#111827; background:rgba(0,0,0,0.04)}
+.nav-list a.active {
+  color: var(--accent);      /* el color de acento que ya usas */
+  font-weight: bold;         /* opcional, para resaltar */
+  border-bottom: 2px solid var(--accent); /* opcional: subrayado tipo pestaña */
+}
+
+p {line-height:1.5;color:var(--muted);}
+
+footer{margin-top:30px; color:var(--muted); font-size:13px; text-align:center}
 
 /* Hero */
 .hero{display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:center; margin-top:28px}
@@ -45,7 +54,56 @@ nav{margin-left:auto}
 .card img{max-width:100%; height:300px; object-fit:cover; border-radius:8px}
 .card p{margin:8px 0 0 0; font-size:13px; color:var(--muted)}
 
-footer{margin-top:30px; color:var(--muted); font-size:13px; text-align:center}
+/* Features */
+.features {
+  list-style: disc inside;   /* puntos bonitos dentro del bloque */
+  padding-left: 10px;
+}
+.features li {
+  margin-bottom: 10px;       /* aire entre cada ítem */
+  color:var(--muted);
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;     /* opcional: un poco más grande */
+  margin: 20px 0;      /* espacio arriba y abajo */
+}
+
+.install-index {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.install-index h3 {
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.install-index ul {
+  list-style: none;
+  display:flex;
+  justify-content: center;
+  gap: 30px;
+  padding-left: 0;
+}
+
+.install-index li {
+  margin: 5px 0;
+}
+
+.install-index a {
+  font-size: 20px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.install-index a:hover {
+  text-decoration: underline;
+}
+
+
 
 /* Responsive */
 @media (max-width:980px){
