@@ -136,53 +136,104 @@ footer{margin-top:30px; color:var(--muted); font-size:13px; text-align:center}
   margin: 0;
 }
 
-.tutorials {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  margin-top: 30px;
+/* Tutorials */
+
+.page-header {
+  background: rgba(30, 136, 229, 0.1);  /* azul muy suave */
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: var(--accent);
+  text-align: center;
+  font-size: 2.2rem;
 }
-.tutorial-card {
+
+.tutorial-section {
+  text-align: center;          /* centra el texto */
+}
+
+.tutorial-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
   background: var(--card);
   border-radius: var(--radius);
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: 0.3s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  overflow: hidden;
+  table-layout: fixed;  /* para respetar anchos */
 }
-.tutorial-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+
+.tutorial-table th:first-child,
+.tutorial-table td:first-child {
+  width: 200px;   /* títulos */
 }
-.tutorial-card h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: var(--accent);
+
+.tutorial-table th:nth-child(2),
+.tutorial-table td:nth-child(2) {
+  width: auto;    /* descripción ocupa lo que quede */
 }
-.tutorial-card p {
-  margin-bottom: 14px;
+
+.tutorial-table th:last-child,
+.tutorial-table td:last-child {
+  width: 140px;   /* botones de descarga */
+  text-align: center;
+}
+
+.tutorial-table th, 
+.tutorial-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb; /* gris claro */
+}
+
+.tutorial-table th {
+  background: #f1f5f9;
+  color: #111827;
+  font-weight: 600;
+}
+
+.tutorial-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Primera columna destacada */
+.tutorial-table td:first-child {
+  font-weight: 600;       /* más énfasis */
+  color: var(--accent);         /* azul medio */
+  width: 220px;           /* ancho fijo opcional */
+}
+
+.tutorial-table td:nth-child(2) {
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.5;
+  line-height:1.4;
 }
-.download-link {
+
+.btn-download {
   display: inline-block;
-  padding: 8px 14px;
+  padding: 6px 12px;
   border-radius: 8px;
-  background: linear-gradient(90deg, var(--accent), #67b1ff);
+  background: linear-gradient(90deg,var(--accent), #67b1ff);
   color: white;
   font-weight: 600;
   text-decoration: none;
   font-size: 14px;
 }
-.download-link:hover {
-  background: linear-gradient(90deg, #1565c0, #5ea0e0);
+
+.btn-download:hover {
+  background: var(--accent);
 }
-.section-title {
-  margin-top: 40px;
-  font-size: 1.5rem;
-  color: #111827;
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 6px;
+
+.acknowledgements {
+  background: rgba(30, 136, 229, 0.05); /* azul muy suave de fondo */
+  padding: 16px 20px;
+  border-left: 4px solid var(--accent); /* línea lateral de acento */
+  border-radius: 8px;
+  margin: 20px 0;
+  font-style: italic;
+  color: var(--muted);
+}
+.acknowledgements p {
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* Responsive */
