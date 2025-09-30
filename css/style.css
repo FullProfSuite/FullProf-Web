@@ -136,7 +136,9 @@ footer{margin-top:30px; color:var(--muted); font-size:13px; text-align:center}
   margin: 0;
 }
 
-/* Tutorials */
+/***********
+ Tutorials 
+***********/
 
 .page-header {
   background: rgba(30, 136, 229, 0.1);  /* azul muy suave */
@@ -234,6 +236,40 @@ footer{margin-top:30px; color:var(--muted); font-size:13px; text-align:center}
 .acknowledgements p {
   margin: 0;
   line-height: 1.6;
+}
+
+/********
+ Contact 
+*********/
+
+.contact-card {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.contact-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+.contact-card h2 {
+  margin: 8px 0;
+  font-size: 24px;
+  color: var(--accent);
+}
+.contact-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact-card a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive */
