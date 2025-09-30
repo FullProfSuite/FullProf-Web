@@ -107,6 +107,11 @@ footer{margin-top:30px; color:var(--muted); font-size:13px; text-align:center}
   text-decoration: underline;
 }
 
+
+/**********
+ References
+***********/
+
 .ref-section {
   margin-bottom: 40px;
 }
