@@ -70,6 +70,10 @@ footer{margin-top:30px; color:var(--muted); font-size:13px; text-align:center}
   margin: 20px 0;      /* espacio arriba y abajo */
 }
 
+.install-card {
+  line-height:1.5;
+  color:var(--muted);
+}
 .install-index {
   padding: 15px;
   margin-bottom: 20px;

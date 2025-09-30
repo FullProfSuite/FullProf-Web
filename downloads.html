@@ -97,110 +97,77 @@
       <section>
         <h2 id="windows">Windows</h2>
         <p>
-          Here go the installation instructions for <span style="color:#1e88e5;">Windows</span>.  
-          (Por ejemplo: descargar el instalador, descomprimir, añadir al PATH, etc.)
+          Download the package (executable installer) in a temporary directory and run it.
+          Follow the indications of the installer. Avoid directories with spaces or non-ASCII characters.
         </p>
       </section>
 
       <section>
         <h2 id="linux">Linux</h2>
-        <p>
-          Here go the installation instructions for <span style="color:#1e88e5;">Linux</span>.  
-          (Por ejemplo: descargar el tar.gz, extraer, compilar con ifx/ifort, etc.)
-        </p>
+        <div class="install-card">
+          <h4>General Mode (for all the users of the system)</h4>
+          <ol>
+            <li>Activate the super-user mode.</li>
+            <li>Create a directory for the FullProf_Suite.<br>
+                For instance: <code>/usr/local/bin/FullProf_Suite</code>
+            </li>
+            <li>Copy the file <code>FullProf_Suite_XXXXNNNN_Lin.tgz</code> (XXX=Month NNNN=year) in the directory created in step 2.</li>
+            <li>Extract the file <code>.tgz</code> with the following command:<br>
+                <pre><code>tar -xzvf FullProf_Suite_XXXXNNNN_Lin.tgz</code></pre>
+            </li>
+            <li>Set up the environment variable <strong>FULLPROF</strong> (see below).</li>
+          </ol>
+
+          <h4>Local Mode (Installation for a single user)</h4>
+          <ol>
+            <li>Create a directory for the FullProf_Suite..<br>
+                For instance: <code>$HOME/FullProf_Suite</code><br>
+                <code>cd $HOME</code><br>
+                <code>mkdir FullProf_Suite</code><br>
+                <code>cd FullProf_Suite</code><br>
+            </li>
+            <li>Copy the file <code>FullProf_Suite_XXXXNNNN_Linux64.tgz</code> (XXXX=Month NNNN=year) in the directory created in step 2</li>
+            <li>Extract the file <code>.tgz</code> with the following command:<br>
+                <pre><code>tar -xzvf FullProf_Suite_XXXXNNNN_Linux64.tgz</code></pre>
+            </li>
+            <li>For the first installation of the FullProf Suite, execute the command:<br>
+                <pre><code>source Set_FULLPROF_Envi</code></pre>
+                That's all!. If something is going wrong you should manually modify the configuration file to activate 
+                the environment variable <strong>FULLPROF</strong> (see below).
+            </li>
+          </ol>
+
+          <h4>Set up the <strong>FULLPROF</strong> environment variable</h4>
+          <p>The commands needed to set up an environment variable are shell-dependent. Usual shells are Bourne (sh,bash), Korn (ksh) and C (csh). We show here the steps for the most common shell: bash.</p>
+          <ol>
+            <li>Open the file <code>.bashrc</code> or <code>.bash_profile</code> located at the user root directory.</li>
+            <li>Define the environment variable <strong>FULLPROF</strong>. Its value must be the absolute path to the FullProf Suite directory.<br>
+                For instance:<pre><code>FULLPROF=/usr/local/bin/FullProf_Suite</code></pre>
+            </li>
+            <li>Add <strong>FULLPROF</strong> variable to the PATH.<br>
+                <pre><code>PATH=$FULLPROF:$PATH</code></pre>
+            </li>
+            <li>Export <strong>FULLPROF</strong> variable.<br>
+                <pre><code>export FULLPROF</code></pre>
+            </li>
+          </ol>
+          <p>Changes must be effective after opening a new terminal window. To verify that everything is ok, type in your terminal the command:<br>
+              <pre><code>echo $FULLPROF</code></pre>
+              The shell must return the directory in which you have installed the FullProf Suite. If the <strong>FULLPROF</strong> environment variable is well set, the different programs of the FullProf Suite will be available from any directory. Programs can be run in console mode or from the toolbar.
+          </p>
+          <p>To update the FullProf Suite redo steps 3 and 4 of the General or Local mode installation described above. Redefine the environment variable if you change the location of the FullProf Suite.
+          </p>
+          <p>In some cases, the graphical interface may fail to work, showing the following error message: <code>libXm.so.3 not available</code>. The issue can be resolved by installing the libraries OpenMotif version 2.3.
+          </p>
+        </div>
+
       </section>
 
       <section>
         <h2 id="macos">macOS</h2>
         <p>
-          Here go the installation instructions for <span style="color:#1e88e5;">macOS</span>.  
-          (Por ejemplo: usar Homebrew, compilar, ajustar permisos de ejecución, etc.)
         </p>
       </section>
-
-
-      <!-- Sección completa de instrucciones -->
-      <section style="margin-top:60px;">
-        
-        <p style="text-align:center; color:var(--muted); margin-bottom:40px;">
-          How to install and set up the FullProf Suite on your system
-        </p>
-
-        <div style="display:grid; grid-template-columns:1fr; gap:20px;">
-
-          <!-- FullProf Suite new compilers -->
-          <div class="card" style="text-align:left; color:#333;">
-            <h3 style="color:#1e3a8a;">FullProf Suite new compilers</h3>
-            <p>
-              During 2024 two kinds of distributions will be available: one built with the classic Intel Fortran compiler (<span style="color:#990000;">ifort</span>) 
-              and the other built using the new Intel compiler (<span style="color:#990000;">ifx</span>). Bugs may appear and users are suggested to communicate
-              misbehaviour of some programs in order to correct immediately the corresponding executable. In the future,
-              only the version with the new compiler (<span style="color:#990000;">ifx</span>) will be available.
-            </p>
-          </div>
-
-          <!-- FullProfApp -->
-          <div class="card" style="text-align:left; color:#333;">
-            <h3 style="color:#1e3a8a;">NEW! FullProfApp</h3>
-            <p>
-              
-            </p>
-            <p>
-              Assumes the FullProf Suite is installed. Manual: 
-              <a href="https://fullprofapp.readthedocs.io/en/stable/" target="_blank" style="color:#1e88e5;">fullprofapp.readthedocs.io</a>.<br>
-              Cite this paper when using the tool: 
-              <a href="https://doi.org/10.1107/S1600576724006885" target="_blank" style="color:#1e88e5;">https://doi.org/10.1107/S1600576724006885</a>
-            </p>
-          </div>
-
-          <!-- Installation Windows -->
-          <div class="card" style="text-align:left; color:#333;">
-            <h3 style="color:#1e3a8a;">Installation of the FullProf Suite for Windows</h3>
-            <p>
-              Download the package (executable installer) in a temporary directory and run it.
-              Follow the indications of the installer. Avoid directories with spaces or non-ASCII characters.
-            </p>
-          </div>
-
-          <!-- Installation macOS/Linux -->
-          <div class="card" style="text-align:left; color:#333;">
-            <h3 style="color:#1e3a8a;">Installation of the Linux-like FullProf Suite for macOS</h3>
-            <p>
-              Unzip <strong style="color:#1e88e5;">FullProf_MacOS_XXXXXX.zip</strong> in the desired location (e.g., $HOME/FullProf_MacOS or /Applications/FullProf_MacOS). Move the “Examples” folder if necessary.
-            </p>
-            <p>
-              Open a terminal and set the shell (default is ZSH; for BASH: <code>chsh -s /bin/bash</code>). 
-              Then run <code>Set_FULLPROF_Envi</code> in the FullProf directory. Follow additional instructions in the script 
-              to fix permissions and environment variables.
-            </p>
-          </div>
-
-          <!-- FullProf Mac App -->
-          <div class="card" style="text-align:left; color:#333;">
-            <h3 style="color:#1e3a8a;">Installation of the FullProf Suite for macOS</h3>
-            <p>
-              <strong style="color:#1e88e5;">FullProf4Mac.app</strong> is the full implementation (64-bit). Double-click the icon to launch. Requires:
-              macOS High Sierra (10.13) or higher, XQuartz v2.7.9 or higher.
-            </p>
-            <p>
-              Drag the app into the Applications folder. Known minor bugs may appear due to XQuartz or macOS APIs.
-            </p>
-          </div>
-
-          <!-- Installation Linux -->
-          <div class="card" style="text-align:left; color:#333;">
-            <h3 style="color:#1e3a8a;">Installation of the FullProf Suite for Linux</h3>
-            <p>
-              Download the version you want from the website. General mode (all users) or Local mode (single user) instructions are provided. Activate the environment variable FULLPROF in your shell configuration file.
-            </p>
-            <p>
-              Ensure OpenMotif libraries are installed if a GUI fails with messages like “libXm.so.3 not available”.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
 
     </main>
 
