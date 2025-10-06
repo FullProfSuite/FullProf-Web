@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Download - FullProf Suite</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="assets/logo.svg" alt="FullProf Suite logo">
+        <div class="brand">
+          <h1>FullProf Suite</h1>
+          <p>Crystallographic tools for Rietveld, profile matching and integrated intensity refinements</p>
+        </div>
+      </div>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="downloads.html" class="active">Download</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="page-title">Previous FullProf Suite versions for Linux</h1>
+
+      <!-- Año 2021 -->
+      <div class="year-section">
+        <h2>2021</h2>
+        <ul class="version-list">
+          <li>
+            <span>FullProf Suite, May, Windows, 64 bits</span>
+            <a class="download-btn btn-win" href="downloads/FullProf_Suite_May2021_Linux64.tgz">Download</a>
+          </li>
+          <li>
+            <span>FullProf Suite, March, 64 bits</span>
+            <a class="download-btn btn-win" href="downloads/Setup_FullProf_Suite_April2021_64b.exe">Download</a>
+          </li>
+        </ul>
+      </div>
+
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> The FullProf team.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
