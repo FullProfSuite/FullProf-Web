@@ -139,8 +139,25 @@
 
       <section>
         <h2 id="macos">macOS</h2>
-        <p>
-        </p>
+        <div class="install-card">
+          <p>Download the file "FullProf4Mac-vxxx.dmg" to the Desktop. Click on it and drag the FullProf4Mac icon to the icon 
+          "Applications". That's all! No need for defining any environment variable.</p>
+
+          <h4>Requirements</h4>
+          <ul>
+            <li>macOS High Sierra (10.13) or higher.</li>
+            <li>a free X11 server must be present on your computer, either www.xquartz.org (v2.7.9 or higher) or 
+            ports.macports.org/port/xorg-server/.</li>
+          </ul>
+
+          <h4>Known bugs</h4>
+          <ul>
+            <li>XQuartz (at least up to 2.7.11): if XCode is not installed on the computer, XQuartz will reluctantly ask for 
+            "XCcode developer tools". There is no harm in installing those tools to get rid of this error message.</li>
+            <li>XQuartz (at least up to 2.7.11): XQuartz still uses old macOS APIs which makes X11 based dialogues quite slow. 
+            Versions 2.8.1 and higher support both Intel and M1 chips and thus the problem may have disappeared.</li>
+          </ul>
+        </div>
       </section>
 
     </main>
