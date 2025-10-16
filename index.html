@@ -27,11 +27,21 @@
           <li><a href="downloads.html">Download</a></li>
           <li><a href="references.html">References</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="Old_FP/index.html">Old_Page</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
+      <section class="hero">
+        <h1 class="page-header">New Web page for the programs of the FullProf Suite</h1>
+          <p> We are engaged in modernizing the complete FullProf Suite and we have started by refurbishing the 
+              Web page. We are changing all the GUIs by moving from Winteracter to PySide6. Presently the
+              new Toolbar is nearly finished and the most important change up to now is the new FullProf Studio 
+              program. The new FullProf Suite will be developed and will coexists with the classic one (se Old_Page item in the navigation part).</p>
+ 
+      </section>
+      
       <section class="hero">
         <div class="hero-card">
           <h2>Crystallographic tools for Rietveld, profile matching and integrated intensity refinements</h2>
@@ -69,17 +79,17 @@
         <h3>Main Features</h3>
         <ul class="features">
         <li> X-ray diffraction data: laboratory and synchrotron sources.</li>
-        <li> One or two wavelengths (eventually with different profile parameters).</li>
+        <li> One or two wavelengths (optionally with different profile parameters).</li>
         <li>Scattering variables: 2theta (in degrees), TOF
             (in microseconds), energy (in KeV).</li>
         <li>Background: fixed, refinable points or polynomial
-            coefficients, Fourier filtering.</li>
+            coefficients, Fourier filtering, etc.</li>
         <li>Choice of peak shape for each phase: Gaussian,
             Lorentzian, modified Lorentzian, pseudo-Voigt, Pearson-VII, Thompson-Cox-Hastings
-            (TCH) pseudo-Voigt, numerical, split pseudo-Voigt, convolution of a double
-            exponential with a TCH pseudo-Voigt for TOF.</li>
+            (TCH) pseudo-Voigt, numerical, split pseudo-Voigt, convolution of back-to-back
+            exponentials with a TCH pseudo-Voigt for TOF.</li>
         <li>Multi-phase (up to 16 phases).</li>
-        <li>Preferred orientation: two functions available.</li>
+        <li>Preferred orientation: Multi-axial March-Dollase functions available.</li>
         <li>Absorption correction for different geometries.
             Micro-absorption for Bragg-Brentano set-up.</li>
         <li>Choice between three weighting scheme: standard
@@ -87,42 +97,42 @@
         <li>Choice between automatic generation of hkl
             and/or symmetry operators and file given by user.</li>
         <li>Magnetic structure refinement (crystallographic
-            and spherical representation of the magnetic moment). Two methods: describing
-            the magnetic structure in the magnetic unit cell or making use of the propagation
-            vectors using the crystallographic unit cell. This second method is necessary
-            for incommensurate magnetic structures.</li>
+            and spherical representation of the magnetic moment). Several methods: describing
+            the magnetic structure in the magnetic unit cell (Shubnikov groups) or making use of the propagation
+            vectors using the crystallographic unit cell. This second method can be used
+            for incommensurate magnetic structures. Superspace formalism for incommensurate magnetic structures.</li>
         <li>Automatic generation of reflections for an incommensurate
             structure with up to 24 propagation vectors. Refinement of propagation vectors
             components in reciprocal lattice units.</li>
         <li>hkl-dependence of FWHM for strain and size effects.</li>
         <li>hkl-dependence of the position shifts of Bragg
             reflections for special kinds of defects.</li>
-        <li>Profile Matching: the full profile can be adjusted
+        <li>Profile Matching (Le Bail fit): the full profile can be adjusted
             without prior knowledge of the structure (needs only good starting cell parameters
             and profile parameters).</li>
         <li>Quantitative analysis withour need of structure
             factor calculations.</li>
         <li>Chemical (distances and angles) and magnetic
-            (magnetic moments) slack constraints. They can be generated automatically
+            (magnetic moments) soft constraints (restraints). They can be generated automatically
             by the program.</li>
         <li>The instrumental resolution function (Voigt
             function) may be supplied in a file. A microstructural 
             analysis is then performed.</li>
-        <li>Form factor refinement of complex objects (plastic crystals).</li>
-        <li>Structural or magnetic model could be supplied
-            by an external subroutine for special purposes (rigid bodies,
+        <li>Form factor refinement of complex objects (plastic crystals). Symmetry adapted spherical harmonics
+            for describing the form factors.</li>
+        <li>Special structural or magnetic models (rigid bodies,
             polymers, small angle scattering of amphifilic crystals, description of incommensurate structure in real direct space).</li>
         <li>Single crystal data or integrated intensities
             can be used as observations (alone or in combination with a powder profile).</li>
         <li>Neutron (or X-ray) powder patterns can be mixed
             with integrated intensities of X-ray (or neutron) 
-          for single crystal or powder data.</li>
+            for single crystal or powder data.</li>
         <li>Full multi-pattern capabilities. The user may
             mix several powder diffraction patterns (eventually heterogeneous: X-rays,
             TOF neutrons, etc.) with total control of the weighting scheme.</li>
-        <li>Montecarlo/Simulated Annealing algorithms have
-            been introduced to search the starting parameters of a structural problem
-            using integrated intensity data.</li>
+        <li>Montecarlo/Simulated Annealing algorithms are available 
+            to search the starting parameters of a structural problem
+            using integrated or profile intensity data.</li>
         </ul>
       </section>
 
