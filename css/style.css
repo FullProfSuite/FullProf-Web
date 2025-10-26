@@ -196,32 +196,141 @@ footer{margin-top:30px; color:var(--muted); font-size:13px; text-align:center}
   text-decoration: underline;
 }
 
-/*********
-Downloads
-*********/
-.downloads{display:grid; grid-template-columns:1fr; gap:20px;}
+
+/* Downloads */
+.downloads{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
+
 @media(min-width:768px){.downloads{grid-template-columns:repeat(3,1fr)}}
-.download-card{background:var(--card); border-radius:var(--radius); padding:24px; box-shadow:0 4px 12px rgba(0,0,0,0.08); transition:0.3s; text-align:center;}
-.download-card:hover{transform:translateY(-6px); box-shadow:0 8px 20px rgba(0,0,0,0.12);}
-.os-icon{font-size:50px; margin-bottom:12px}
-.download-card h2{margin-bottom:20px; font-size:24px}
-.download-btn{
+
+.platform-card{
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  transition:0.3s;
+  text-align:center;
+}
+
+.platform-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+.platform-card h2{
+  margin-bottom:20px;
+  font-size:24px
+}
+
+.os-icon{
+  font-size:50px;
+  margin-bottom:12px
+}
+
+.download-card{
   display:block;
   margin:10px auto;
   padding:12px 20px;
   border-radius:12px;
   font-weight:700;
   text-decoration:none;
-  color:white;
+  color:#333333;
   transition:0.3s;
 }
-.btn-win{background:linear-gradient(135deg,#1e88e5,#67b1ff);}
+
+.platform-win .download-card{
+  box-shadow: 0 4px 12px rgba(63, 81, 181, 0.4); /* #3f51b5 -> (61,81,181) */
+}
+
+.platform-win .value {
+  color:#3f51b5;  
+}
+
+.platform-lin .download-card{
+  box-shadow: 0 4px 12px rgba(0, 121, 107, 0.4); /* #00796b -> (0,121,107) */
+}
+
+.platform-lin .value {
+  color:#00796b;  
+}
+
+.platform-mac .download-card{
+  box-shadow: 0 4px 12px rgba(198, 40, 40, 0.4);
+}
+
+.platform-mac .value {
+  color:#c62828;  
+}
+
+.download-info{
+  font-size: 0.9em;
+}
+
+.download-title{
+  font-size:1.2em;
+  font-style:bold;
+  display:block;
+}
+
+.download-details{
+  opacity: 0.9;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 6px;
+  column-gap: 10px;
+  font-size: 0.95em;
+  margin-top:0.5em;
+}
+
+.download-details .label {
+  text-align: right;
+}
+
+.download-details .value {
+  text-align: left;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top:1em;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  background: white; /* igual que el contenedor si quieres */
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(30, 136, 229, 0.5);
+}
+
+.platform-win .download-btn {
+  color: var(--card);
+  background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+}
+
+.platform-lin .download-btn {
+  color: var(--card);
+  background: linear-gradient(135deg, #009688, #00796b);
+}
+
+.platform-mac .download-btn {
+  color: var(--card);
+  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+}
+
+/*.download-info .date {display: block;font-style: italic;}*/
+
 .btn-win:hover{transform:translateY(-3px); box-shadow:0 6px 12px rgba(30,136,229,0.4);}
 .btn-linux{background:linear-gradient(135deg,#43a047,#80c784);}
 .btn-linux:hover{transform:translateY(-3px); box-shadow:0 6px 12px rgba(67,160,71,0.4);}
 .btn-mac{background:linear-gradient(135deg,#333333,#555555);}
 .btn-mac:hover{transform:translateY(-3px); box-shadow:0 6px 12px rgba(51,51,51,0.4);}
-
 .tag-new {
   background: #fff59d;
   color:  #b71c1c;
