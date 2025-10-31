@@ -16,10 +16,9 @@
         <img src="assets/logo.svg" alt="FullProf Suite logo">
         <div class="brand">
           <h1>FullProf Suite</h1>
-          <p>Crystallographic tools for Rietveld, profile matching and integrated intensity refinements</p>
+          <p>Crystallographic tools for diffraction</p>
         </div>
       </div>
-
       <nav aria-label="Navegación principal">
         <ul class="nav-list">
           <li><a href="index.html" class="active">Home</a></li>
@@ -29,7 +28,9 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
     </header>
+    
     <div class="announcement">
       <div class="announcement-header">🚀 News!</div>
       <p>
@@ -164,6 +165,8 @@
     const modalImg = document.getElementById("modalImage");
     const captionText = document.getElementById("caption");
     const closeBtn = document.querySelector(".close");
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
 
     // Para cada imagen con clase zoomable, añadir doble click
     document.querySelectorAll(".zoomable").forEach(img => {
@@ -181,6 +184,11 @@
     modal.onclick = (e) => {
       if (e.target === modal) modal.style.display = "none";
     };
+
+    //
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
   </script>
 </body>
 </html>
