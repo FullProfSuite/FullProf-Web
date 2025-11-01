@@ -26,6 +26,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
     </header>
      <div class="announcement">
       <div class="announcement-header">🚀 News!</div>
@@ -275,7 +276,13 @@
   </div>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();//
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
   </script>
 </body>
 </html>
