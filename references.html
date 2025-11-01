@@ -14,7 +14,7 @@
         <img src="assets/logo.svg" alt="FullProf Suite logo">
         <div class="brand">
           <h1>FullProf Suite</h1>
-          <p>Crystallographic tools for Rietveld, profile matching and integrated intensity refinements</p>
+          <p>Crystallographic tools diffraction</p>
         </div>
       </div>
 
@@ -27,6 +27,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
     </header>
 
     <!-- Main -->
@@ -77,8 +78,18 @@
 
     <!-- Footer -->
     <footer>
-      © 2025 The FullProf team.
+      <p>© <span id="year"></span> The FullProf team.</p>
     </footer>
   </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();//
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

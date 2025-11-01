@@ -310,6 +310,135 @@ footer{
   color:var(--muted);
 }
 
+/* Documentation */
+
+.page-header {
+  background: rgba(30, 136, 229, 0.1);  
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: var(--accent);
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.tutorial-section {
+  text-align: center;          
+}
+
+.tutorial-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  overflow: hidden;
+  table-layout: fixed;  
+}
+
+.tutorial-table th:first-child,
+.tutorial-table td:first-child {
+  width: 200px;   
+}
+
+.tutorial-table th:nth-child(2),
+.tutorial-table td:nth-child(2) {
+  width: auto;    
+}
+
+.tutorial-table th:last-child,
+.tutorial-table td:last-child {
+  width: 140px;   
+  text-align: center;
+}
+
+.tutorial-table th, 
+.tutorial-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb; 
+}
+
+.tutorial-table th {
+  background: #f1f5f9;
+  color: #111827;
+  font-weight: 600;
+}
+
+.tutorial-table tr:last-child td {
+  border-bottom: none;
+}
+
+.tutorial-table td:first-child {
+  font-weight: 600;       
+  color: var(--accent);         
+  width: 220px;           
+}
+
+.tutorial-table td:nth-child(2) {
+  color: var(--muted);
+  line-height:1.4;
+}
+
+.btn-download {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: linear-gradient(90deg,var(--accent), #67b1ff);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-download:hover {
+  background: var(--accent);
+}
+
+.acknowledgements {
+  background: rgba(30, 136, 229, 0.05); 
+  padding: 16px 20px;
+  border-left: 4px solid var(--accent); 
+  border-radius: 8px;
+  margin: 20px 0;
+  font-style: italic;
+  color: var(--muted);
+}
+.acknowledgements p {
+  margin: 0;
+  line-height: 1.6;
+} 
+
+
+/*
+.year-section {
+  margin-bottom: 40px;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.year-section h2 {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 4px;
+  margin-bottom: 16px;
+}
+.version-list {
+  list-style: none;
+  padding: 0;
+}
+.version-list li {
+  display: grid;
+  grid-template-columns: 1fr auto; 
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.version-list span {
+  color: var(--muted); */
+
 /* Download */
 
 .install-card {
@@ -509,6 +638,32 @@ footer{
   font-weight: 800;
 }
 
+/* References */
+
+.ref-section {
+  margin-bottom: 40px;
+}
+
+.ref-list {
+  display: grid;
+  gap: 16px;
+}
+
+.ref-card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.ref-card p {
+  margin: 0;
+}
+
 /* Contact */
 
 .contact-grid {
@@ -629,197 +784,69 @@ footer{
     display: none;
   }
 
-/* Download */
+/* Documentation */
 
-.downloads {
-  grid-template-columns:1fr;
-}
+  .tutorial-table {
+    display: block;
+    overflow-x: auto;      /* permite scroll horizontal si es necesario */
+    white-space: nowrap;   /* evita que el texto se rompa en varias líneas */
+    border-radius: 8px;
+  }
 
-/* Contact */
+  /* Ajustar tamaño de texto y espaciado */
+  .tutorial-table th,
+  .tutorial-table td {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
 
-.contact-grid {
-  grid-template-columns:1fr;
-}
+  .tutorial-table::after {
+    content: "↔︎";
+    display: block;
+    text-align: right;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    padding-right: 10px;
+  }
 
-}
+  /* Encabezados más pequeños */
+  .page-header {
+    font-size: 1.6rem;
+    padding: 8px 12px;
+  }
 
+  /* Centrar mejor títulos */
+  .tutorial-section {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
 
+  /* Download */
 
+  .downloads {
+    grid-template-columns:1fr;
+  }
 
+  /* Contact */
 
+  .contact-grid {
+    grid-template-columns:1fr;
+  }
 
-
-
-
-
-/**********
- References
-***********/
-
-.ref-section {
-  margin-bottom: 40px;
-}
-
-.ref-section h3 {
-  margin-bottom: 16px;
-  color: var(--accent);
-  font-size: 1.3rem;
-}
-
-.ref-list {
-  display: grid;
-  gap: 16px;
-}
-
-.ref-card {
-  background: var(--card);
-  padding: 18px;
-  border-radius: var(--radius);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--muted);
-  margin-bottom: 16px;
-}
-
-.ref-card p {
-  margin: 0;
-}
-
-/***********
- Tutorials 
-***********/
-
-.page-header {
-  background: rgba(30, 136, 229, 0.1);  /* azul muy suave */
-  padding: 10px 20px;
-  border-radius: 12px;
-  color: var(--accent);
-  text-align: center;
-  font-size: 2.2rem;
-}
-
-.tutorial-section {
-  text-align: center;          /* centra el texto */
-}
-
-.tutorial-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  overflow: hidden;
-  table-layout: fixed;  /* para respetar anchos */
-}
-
-.tutorial-table th:first-child,
-.tutorial-table td:first-child {
-  width: 200px;   /* títulos */
-}
-
-.tutorial-table th:nth-child(2),
-.tutorial-table td:nth-child(2) {
-  width: auto;    /* descripción ocupa lo que quede */
-}
-
-.tutorial-table th:last-child,
-.tutorial-table td:last-child {
-  width: 140px;   /* botones de descarga */
-  text-align: center;
-}
-
-.tutorial-table th, 
-.tutorial-table td {
-  padding: 12px 16px;
-  text-align: left;
-  border-bottom: 1px solid #e5e7eb; /* gris claro */
-}
-
-.tutorial-table th {
-  background: #f1f5f9;
-  color: #111827;
-  font-weight: 600;
-}
-
-.tutorial-table tr:last-child td {
-  border-bottom: none;
-}
-
-/* Primera columna destacada */
-.tutorial-table td:first-child {
-  font-weight: 600;       /* más énfasis */
-  color: var(--accent);         /* azul medio */
-  width: 220px;           /* ancho fijo opcional */
-}
-
-.tutorial-table td:nth-child(2) {
-  color: var(--muted);
-  line-height:1.4;
-}
-
-.btn-download {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 8px;
-  background: linear-gradient(90deg,var(--accent), #67b1ff);
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.btn-download:hover {
-  background: var(--accent);
-}
-
-.acknowledgements {
-  background: rgba(30, 136, 229, 0.05); /* azul muy suave de fondo */
-  padding: 16px 20px;
-  border-left: 4px solid var(--accent); /* línea lateral de acento */
-  border-radius: 8px;
-  margin: 20px 0;
-  font-style: italic;
-  color: var(--muted);
-}
-.acknowledgements p {
-  margin: 0;
-  line-height: 1.6;
 }
 
 
 
-/****************
-FPSuite versions
-****************/
-.year-section {
-  margin-bottom: 40px;
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 24px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-.year-section h2 {
-  color: var(--accent);
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 4px;
-  margin-bottom: 16px;
-}
-.version-list {
-  list-style: none;
-  padding: 0;
-}
-.version-list li {
-  display: grid;
-  grid-template-columns: 1fr auto; /* texto a la izquierda, botón a la derecha */
-  align-items: center;
-  margin-bottom: 8px;
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-.version-list span {
-  color: var(--muted);
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive */
 /*
