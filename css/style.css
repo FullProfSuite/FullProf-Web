@@ -249,7 +249,7 @@ footer{
   transform: scale(1.05);
 }
 
-/* MAIN */
+/* Main */
 
 .cta {
   margin-top:14px
@@ -310,7 +310,7 @@ footer{
   color:var(--muted);
 }
 
-/* DOWNLOADS */
+/* Download */
 
 .install-card {
   line-height:1.5;
@@ -509,6 +509,52 @@ footer{
   font-weight: 800;
 }
 
+/* Contact */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dos columnas */
+  gap: 24px; /* espacio entre tarjetas */
+  margin-top: 30px;
+  justify-items:stretch;
+}
+
+.contact-card {
+  margin: 2vh auto;
+  padding: 24px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:60%;
+}
+
+.contact-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.contact-card h2 {
+  margin: 8px 0;
+  font-size: 24px;
+  color: var(--accent);
+}
+
+.contact-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 992px) {
 
   body {
@@ -572,7 +618,7 @@ footer{
     gap: 20px;
   }
 
-/* MAIN */
+/* Main */
 
   .gallery {
     grid-template-columns: 1fr; /* una imagen por fila */
@@ -583,9 +629,15 @@ footer{
     display: none;
   }
 
-/* DOWNLOADS */
+/* Download */
 
 .downloads {
+  grid-template-columns:1fr;
+}
+
+/* Contact */
+
+.contact-grid {
   grid-template-columns:1fr;
 }
 
@@ -736,52 +788,7 @@ footer{
   line-height: 1.6;
 }
 
-/********
- Contact 
-*********/
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* dos columnas */
-  gap: 24px; /* espacio entre tarjetas */
-  margin-top: 30px;
-  justify-items:stretch;
-}
-
-.contact-card {
-  /*max-width: 400px;*/
-  margin: 40px auto;
-  padding: 24px;
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width:100%;
-}
-.contact-card img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 16px;
-}
-.contact-card h2 {
-  margin: 8px 0;
-  font-size: 24px;
-  color: var(--accent);
-}
-.contact-card a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-}
-.contact-card a:hover {
-  text-decoration: underline;
-}
 
 /****************
 FPSuite versions
