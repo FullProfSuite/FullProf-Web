@@ -2,22 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>References - FullProf Suite</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link id="css-theme" rel="stylesheet">
+  <script>
+      // Añade automáticamente un parámetro timestamp para evitar caché
+      const css = document.getElementById("css-theme");
+      css.href = `css/style.css?v=${new Date().getTime()}`;
+  </script>
 </head>
 <body>
   <div class="container">
-
-    <!-- Header -->
     <header>
       <div class="logo">
         <img src="assets/logo.svg" alt="FullProf Suite logo">
         <div class="brand">
           <h1>FullProf Suite</h1>
-          <p>Crystallographic tools diffraction</p>
+          <p>Crystallographic tools for diffraction</p>
         </div>
       </div>
-
       <nav aria-label="Navegación principal">
         <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
@@ -29,7 +32,6 @@
       </nav>
       <button class="menu-toggle" aria-label="Toggle menu">☰</button>
     </header>
-
     <!-- Main -->
     <main>
       <!-- FullProf -->
@@ -42,7 +44,6 @@
           <p>Rodríguez-Carvajal, J., González-Platas, J., Katcho, N.A. (2025). <em>Magnetic structure determination and refinement using FullProf.</em> Acta Cryst B: Structural Science, 3, 302-317. <a href="https://doi.org/10.1107/S2052520625003944" target="_blank">https://doi.org/10.1107/S2052520625003944</a></p>
         </div>
       </section>
-
       <!-- WinPLOTR -->
       <section class="ref-section">
         <h3>WinPLOTR</h3>

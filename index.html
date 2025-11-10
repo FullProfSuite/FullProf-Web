@@ -4,7 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>FullProf Suite</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link id="css-theme" rel="stylesheet">
+  <script>
+      // Añade automáticamente un parámetro timestamp para evitar caché
+      const css = document.getElementById("css-theme");
+      css.href = `css/style.css?v=${new Date().getTime()}`;
+  </script>
   <style>
 
   </style>
