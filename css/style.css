@@ -333,22 +333,22 @@ footer{
   border-radius: var(--radius);
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   overflow: hidden;
-  table-layout: fixed;  
+  table-layout: fixed;
 }
 
 .tutorial-table th:first-child,
 .tutorial-table td:first-child {
-  width: 200px;   
+  width: 300px;
 }
 
 .tutorial-table th:nth-child(2),
 .tutorial-table td:nth-child(2) {
-  width: auto;    
+  width: auto;
 }
 
 .tutorial-table th:last-child,
 .tutorial-table td:last-child {
-  width: 140px;   
+  width: 140px;
   text-align: center;
 }
 
@@ -486,17 +486,6 @@ footer{
 
 .downloads {
   gap:20px
-}
-
-.download-table th {
-  text-align: left;
-  padding: 14px 16px;
-  background: #f8fafc;
-  color: #6b7280;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
 }
 
 .platform-card {
