@@ -322,7 +322,7 @@ footer{
 }
 
 .tutorial-section {
-  text-align: center;          
+  text-align: center;
 }
 
 .tutorial-table {
@@ -370,9 +370,9 @@ footer{
 }
 
 .tutorial-table td:first-child {
-  font-weight: 600;       
-  color: var(--accent);         
-  width: 220px;           
+  font-weight: 600;
+  color: var(--accent);
+  width: 220px;
 }
 
 .tutorial-table td:nth-child(2) {
@@ -478,10 +478,25 @@ footer{
   text-decoration: underline;
 }
 
-.downloads {
+/*.downloads {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
+}*/
+
+.downloads {
+  gap:20px
+}
+
+.download-table th {
+  text-align: left;
+  padding: 14px 16px;
+  background: #f8fafc;
+  color: #6b7280;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .platform-card {
