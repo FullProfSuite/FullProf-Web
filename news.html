@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Download - FullProf Suite</title>
+  <link id="css-theme" rel="stylesheet">
+  <script>
+      // Añade automáticamente un parámetro timestamp para evitar caché
+      const css = document.getElementById("css-theme");
+      css.href = `css/style.css?v=${new Date().getTime()}`;
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="assets/logo.svg" alt="FullProf Suite logo">
+        <div class="brand">
+          <h1>FullProf Suite</h1>
+          <p>Crystallographic tools for diffraction</p>
+        </div>
+      </div>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="news.html" class="active"></a></li>
+          <li><a href="downloads.html">Download</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    </header>
+  </div>
+</body>
+</html>
