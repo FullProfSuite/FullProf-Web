@@ -37,35 +37,66 @@
     <!-- Main -->
 
     <main>
-      <p>xxxxxxxxxxxxxxxxxxxxxx</p>
+      <p class="news-intro"><strong>In this page we provide up-to-date changes in the programs of the FullProf Suite</strong></p>
+      
       <article class="news-item">
         <div class="news-header">
           <div class="news-date">
-            <span class="news-day">29</span> <span class="news-month">September 2026</span>
+            <span class="news-day">30</span> <span class="news-month">September 2026: New program <strong>Edit_PyCR</strong></span>
           </div>
         </div> 
         <div class="news-body">
           <ul>
-            <li> XXX.</li>
-            <li> YYY.</li>
-            <li> ZZZ.</li>
+            
+            <li> The program <strong>Edit_PyCR</strong>, written by Oscar Fabelo, has been included in both 
+            the classic and the new toolbar. The aim of this program is to replace the old <strong>Ed_PCR</strong>. 
+            The philosophy of the program is quite different: a combination of manual and automatic editing with
+            plenty of graphic possibilities for managing the refinement and generating a history of the refinement process.
+            Information about the variables existing in the PCR file are provided in a similar way as <strong>GetControl</strong>.            
+            The program constitutes a separate package that can be downloaded from the Download page of this site. </li>
+            
+            <li> Some changes have been performed in the classic and the new toolbar. The programs <strong>PANDA</strong> 
+            and <strong>GetControl</strong> are no more distributed within the <strong>FullProf Suite</strong package>. 
+            We have adopted the same philosophy as for <strong>VESTA</strong> and for <strong>Edit_PyCR</strong>.
+            They are treated as external programs: the user should notify the toolbar (in Settings) where are the executables
+            of these programs. </li>
+            
           </ul>
         </div>
       </article>
+      
       <article class="news-item">
         <div class="news-header">
           <div class="news-date">
-            <span class="news-day">13</span> <span class="news-month">July 2026</span>
+            <span class="news-day">21</span> <span class="news-month">July 2026: Changes in <strong>mCIF_to_PCR</strong></span>
           </div>
         </div> 
         <div class="news-body">
           <ul>
-            <li> XXX.</li>
-            <li> YYY.</li>
-            <li> ZZZ.</li>
+            <li> When running <strong>mCIF_to_PCR</strong> providing a template PCR file to be modified (see note of
+      16 August 2024), the name of the generated PCR file has the same code as the mCIF file instead
+      of the template name with the suffix "_mod". If the user wants to provide another particular name,
+      an additional argument with the wished name is needed.  This was already available in the 
+      previous version.</li>
+      Example, the command:  <strong> prompt> mCIF_to_PCR  my_mcif_file.mcif  Template_file.pcr   3</strong>
+      <ul>With the above command only ONE file is generated: my_mcif_file.pcr</ul>  
+      <ul>This file contains directly the modified Template_file.pcr PCR file.</ul>
+      
+      The following command:      
+      <strong>prompt> mCIF_to_PCR  my_mcif_file.mcif  Template_file.pcr   3   My_Name.pcr</strong>,      
+      produces TWO files: <strong>my_mcif_file.pcr</strong> that is a generic simulation PCR file, and
+      <strong>My_Name.pcr</strong> that is the modified <strong>Template_file.pcr</strong> file.      
+      In all cases the block starting with "!  Data for PHASE number " corresponding to
+      phase number 3, and finishing with "!-------> Profile Parameters" is replaced with the
+      generated conversion of the mCIF file..</li>
+            <li> <strong>mCIF_to_PCR</strong> has been updated for superspace. In some circumstances the generation of
+      the symmetry operators was wrong. Now the generators in the PCR file corresponds strictly
+      to the operators provided in the mCIF file except the identity that is omitted. .</li>
+            <li> A bug in the creation of mCIF files by <strong>FullProf</strong> for superspace has been corrected..</li>
           </ul>
         </div>
       </article>
+    
     </main>
 
     <!-- Footer -->

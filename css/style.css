@@ -337,13 +337,17 @@ footer{
 }
 
 .news-day {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: 1;
 }
 
+.news-intro {
+    font-size:1.6rem;
+}
+
 .news-month {
-  font-size: 1.05rem;
+  font-size: 1.45rem;
   color: #666;
 }
 
