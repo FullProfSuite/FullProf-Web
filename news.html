@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Download - FullProf Suite</title>
+  <title>News - FullProf Suite</title>
   <link id="css-theme" rel="stylesheet">
   <script>
       // Añade automáticamente un parámetro timestamp para evitar caché
@@ -25,7 +25,7 @@
         <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="documentation.html">Documentation</a></li>
-          <li><a href="news.html" class="active"></a></li>
+          <li><a href="news.html" class="active">News</a></li>
           <li><a href="downloads.html">Download</a></li>
           <li><a href="references.html">References</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -33,6 +33,54 @@
       </nav>
       <button class="menu-toggle" aria-label="Toggle menu">☰</button>
     </header>
+
+    <!-- Main -->
+
+    <main>
+      <p>xxxxxxxxxxxxxxxxxxxxxx</p>
+      <article class="news-item">
+        <div class="news-header">
+          <div class="news-date">
+            <span class="news-day">29</span> <span class="news-month">September 2026</span>
+          </div>
+        </div> 
+        <div class="news-body">
+          <ul>
+            <li> XXX.</li>
+            <li> YYY.</li>
+            <li> ZZZ.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="news-item">
+        <div class="news-header">
+          <div class="news-date">
+            <span class="news-day">13</span> <span class="news-month">July 2026</span>
+          </div>
+        </div> 
+        <div class="news-body">
+          <ul>
+            <li> XXX.</li>
+            <li> YYY.</li>
+            <li> ZZZ.</li>
+          </ul>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© <span id="year"></span> The FullProf team.</p>
+    </footer>
   </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();//
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
