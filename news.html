@@ -42,7 +42,7 @@
       <article class="news-item">
         <div class="news-header">
           <div class="news-date">
-            <span class="news-day">30</span> <span class="news-month">September 2026: New program <strong>Edit_PyCR</strong></span>
+            <span class="news-day">2</span> <span class="news-month">October 2026: New program <strong>Edit_PyCR</strong>. Constraints in Simulated Annealing.</span>
           </div>
         </div> 
         <div class="news-body">
@@ -52,16 +52,77 @@
             the classic and the new toolbar. The aim of this program is to replace the old <strong>Ed_PCR</strong>. 
             The philosophy of the program is quite different: a combination of manual and automatic editing with
             plenty of graphic possibilities for managing the refinement and generating a history of the refinement process.
-            Information about the variables existing in the PCR file are provided in a similar way as <strong>GetControl</strong>.            
-            The program constitutes a separate package that can be downloaded from the Download page of this site. </li>
+            Information about the variables existing in the PCR file are provided in a similar way as <strong>GetControl</strong>. 
+            The aim of this program is to diminish the slope of the learning curve for new users of FullProf by concentrating
+            the normal working tasks with diffraction patterns in a single application. The program constitutes a separate      
+            package that can be downloaded from the FullProf Suite site.
+            </li>
             
             <li> Some changes have been performed in the classic and the new toolbar. The programs <strong>PANDA</strong> 
             and <strong>GetControl</strong> are no more distributed within the <strong>FullProf Suite</strong package>. 
             We have adopted the same philosophy as for <strong>VESTA</strong> and for <strong>Edit_PyCR</strong>.
             They are treated as external programs: the user should notify the toolbar (in Settings) where are the executables
-            of these programs. </li>
-                        
-          </ul>
+            of these programs. 
+            </li>
+            <li>
+            Changes in the console version of <strong>FullProf</strong> for generating files to be used by <strong>Edit_PyCR</strong>. 
+            The program generates (if Ls2 = 4 and Iot = 0 or positive) a file at each cycle of extension PLT
+            that is read by <strong>Edit_PyCR</strong> to plot the diffraction pattern during the refinement.           
+            </li>      
+         
+            <li>
+            Linear constraints have been implemented for simulated annealing work. The variable NLI is interpreted as the
+            number of linear constraints (instead of restraints) when Cry=3 (simulated annealing). One selected parameter
+            is obtained as a linear combination of the parameters entering in the simulated annealing list. The format is
+            similar to that used for linear restraints.
+           <p>A set of NLI pairs of lines containing the following information:</p>
+              <p><strong>Name_constraint  Npar </strong> &nbsp;&nbsp;&nbsp; !Number of involved parameters counting <br>     
+                 <strong>Num_par  =   coeff1  nPar1   coeff2  nPar2  . . .  coeffNpar  nParNpar</strong>
+       
+      <p>The items <strong>nPari (i=1, Npar)</strong> are the number of the parameters that should belong
+      to the list provided for variation in simulated annealing. The parameters Num_par
+      should have a refinement code within the range <strong>[min_nPar,max_nPar]</strong>.</p>
+      
+      As an example, we provide pieces of a PCR file showing how to make the constrains. 
+      In this example <strong>[min_nPar,max_nPar] = [1, 5]</strong>,  the parameter <strong>2</strong> is constrained to be the double 
+      of the parameter <strong>1</strong> and the parameter <strong>4</strong> is equal to the double of the difference
+      between the parameters <strong>3</strong> and <strong>5</strong>. Only the parameters <strong>1, 3 and 5</strong> enter into the simulated
+      annealing process.      
+      <pre>
+. . . . . . . . . . . 
+!Job Npr Nph Nba Nex Nsc Nor Dum Iwg Ilo Ias Res Ste Nre Cry Uni Cor Opt Aut
+   1   0   1   0   0   0   0   0   1   0   0   0   0   3   3   0   0   0   0
+. . . . . . . . . . . 
+!
+       5    !Number of refined parameters
+. . . . . . . . . . . 
+Dy     JDY3  1  1  0.98193 0.06769 0.25000 0.13562  1.00000   4.000   8.000   0.000  
+                      0.00    0.00    0.00    0.00     0.00   11.00   21.00    0.00
+     0.000   0.000   0.000   0.000   0.000   0.000  0.00000
+      0.00    0.00    0.00    0.00    0.00    0.00     0.00
+Fe     MFE3  1  1  0.50000 0.00000 0.00000 0.30290  1.00000   3.507   2.493   2.028  
+                      0.00    0.00    0.00    0.00     0.00   31.00   51.00   41.00
+     0.000   0.000   0.000   0.000   0.000   0.000  0.00000
+      0.00    0.00    0.00    0.00    0.00    0.00     0.00
+. . . . . . . . . . . 
+! Limits for selected parameters (+ steps & BoundCond for Simulated Annealing):
+   1      0.0000     10.0000      0.0072   0     C1_Dy                                          
+   3    -10.0000     10.0000      0.0118   0     C1_Fe                                          
+   5    -10.0000     10.0000      0.0452   0     C2_Fe                                          
+!  T_ini    Anneal   Accept  NumTemps NumThCyc InitConf
+ 15.00000   0.9000 -0.00100       90        0        0
+. . . . . . . . . . . 
+!  Set of  2 linear constraints:
+!  Identifier, number of involved parameters  / First parameter & List of coeff & rest of Parameters 
+C2Dy=2C1        2
+    2 =    2.0000000    1
+C3Fe=2(C1-C2)   3
+    4 =    2.0000000    3   -2.0000000    5
+      </pre>            
+            
+            </li>
+
+         </ul>
         </div>
       </article>
       
