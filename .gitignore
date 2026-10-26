@@ -1,3 +1,4 @@
-# Large binary distributions: published separately (GitHub Releases / ILL server), not in git
+# Large binary distributions are published as assets of the "downloads" GitHub Release.
+# Only the files under downloads/Docs/ linked from the pages are tracked (added with git add -f).
 downloads/
 old_FP/
